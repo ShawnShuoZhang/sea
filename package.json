@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@hw-agconnect/database-server": "^1.0.21"
+  }
+}

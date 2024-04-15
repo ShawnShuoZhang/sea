@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 4,
+  "permissions": [
+    {
+      "permissions": [
+        {
+          "role": "World",
+          "rights": [
+            "Read",
+            "Upsert"
+          ]
+        },
+        {
+          "role": "Authenticated",
+          "rights": [
+            "Read",
+            "Upsert"
+          ]
+        },
+        {
+          "role": "Creator",
+          "rights": [
+            "Read",
+            "Upsert",
+            "Delete"
+          ]
+        },
+        {
+          "role": "Administrator",
+          "rights": [
+            "Read",
+            "Upsert",
+            "Delete"
+          ]
+        }
+      ],
+      "objectTypeName": "box"
+    },
+    {
+      "permissions": [
+        {
+          "role": "World",
+          "rights": [
+            "Read"
+          ]
+        },
+        {
+          "role": "Authenticated",
+          "rights": [
+            "Read",
+            "Upsert"
+          ]
+        },
+        {
+          "role": "Creator",
+          "rights": [
+            "Read",
+            "Upsert",
+            "Delete"
+          ]
+        },
+        {
+          "role": "Administrator",
+          "rights": [
+            "Read",
+            "Upsert",
+            "Delete"
+          ]
+        }
+      ],
+      "objectTypeName": "Post"
+    }
+  ],
+  "objectTypes": [
+    {
+      "indexes": [
+        {
+          "indexName": "insertDate",
+          "indexList": [
+            {
+              "fieldName": "insertDate",
+              "sortType": "DESC"
+            }
+          ]
+        },
+        {
+          "indexName": "likeCount",
+          "indexList": [
+            {
+              "fieldName": "likeCount",
+              "sortType": "DESC"
+            }
+          ]
+        },
+        {
+          "indexName": "userId",
+          "indexList": [
+            {
+              "fieldName": "userId",
+              "sortType": "ASC"
+            }
+          ]
+        }
+      ],
+      "objectTypeName": "Post",
+      "fields": [
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "id",
+          "notNull": true,
+          "isSensitive": false,
+          "belongPrimaryKey": true,
+          "fieldType": "LongAutoIncrement"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "userId",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "",
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "content",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "",
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "name",
+          "notNull": false,
+          "isSensitive": false,
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "profilePicture",
+          "notNull": false,
+          "isSensitive": false,
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "insertDate",
+          "notNull": false,
+          "isSensitive": false,
+          "belongPrimaryKey": false,
+          "fieldType": "Date"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "likes",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "[]",
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "likeCount",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "0",
+          "belongPrimaryKey": false,
+          "fieldType": "Integer"
+        }
+      ]
+    },
+    {
+      "indexes": [
+        {
+          "indexName": "index_time",
+          "indexList": [
+            {
+              "fieldName": "time",
+              "sortType": "DESC"
+            }
+          ]
+        },
+        {
+          "indexName": "index_name_and_time",
+          "indexList": [
+            {
+              "fieldName": "name_and_time",
+              "sortType": "DESC"
+            }
+          ]
+        },
+        {
+          "indexName": "index_name",
+          "indexList": [
+            {
+              "fieldName": "name",
+              "sortType": "ASC"
+            }
+          ]
+        }
+      ],
+      "objectTypeName": "box",
+      "fields": [
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "time",
+          "notNull": true,
+          "isSensitive": false,
+          "belongPrimaryKey": true,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "oxygen",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "0.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "ph",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "7.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "temperature",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "20.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "salt",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "1.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "nitrite",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "1.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "ammonia",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "1.0",
+          "belongPrimaryKey": false,
+          "fieldType": "Float"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "name",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "0-0-0",
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        },
+        {
+          "isNeedEncrypt": false,
+          "fieldName": "name_and_time",
+          "notNull": true,
+          "isSensitive": false,
+          "defaultValue": "0000",
+          "belongPrimaryKey": false,
+          "fieldType": "String"
+        }
+      ]
+    }
+  ]
+}
