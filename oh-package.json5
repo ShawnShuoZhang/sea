@@ -7,8 +7,7 @@
   "license": "",
   "dependencies": {
     "@maple/navigationbarview": "^1.0.5",
-    "@mcui/mccharts": "^1.0.2",
-    "@ohos/pulltorefresh": "^2.0.5"
+    "@mcui/mccharts": "^1.0.2"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.11"

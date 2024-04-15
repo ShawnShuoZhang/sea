@@ -29,17 +29,7 @@ struct Home {
 
   private getData(i: number) {
     let boxInfo = new box()
-    // 获取当前时间戳
-    let currentTimeStamp: number = Date.now();
-
-    // 创建 Date 对象
-    let date = new Date(currentTimeStamp);
-
-    // 格式化日期字符串
-    let formattedDate: string = `${date.getFullYear()}-${String(date.getMonth() + 1)
-      .padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}-${String(date.getHours())
-      .padStart(2, '0')}-${String(date.getMinutes()).padStart(2, '0')}-${String(date.getSeconds()).padStart(2, '0')}`;
-    boxInfo.setTime('海洋牧场网箱' + (i + 1).toString() + ' ' + formattedDate)
+    boxInfo.setTime(Date.now().toString())
     boxInfo.setTemperature(this.randomNum(40))
     boxInfo.setOxygen(this.randomNum(20))
     boxInfo.setPh(this.randomNum(14))
